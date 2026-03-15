@@ -6,7 +6,6 @@
   "scripts": {
     "dev": "node src/server.js",
     "start": "node src/server.js",
-    "lint": "echo \"Add eslint later\"",
     "test": "echo \"Add backend tests later\""
   },
   "dependencies": {
