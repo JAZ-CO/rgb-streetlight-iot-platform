@@ -1,7 +1,6 @@
 # rgb-streetlight-iot-platform
 Here is a clean **README.md** you can copy and paste:
 
-````markdown
 # Adaptive RGB Smart Street Lighting System
 
 An IoT-based smart lighting pilot for a **private campus road or private roadway**, built using **two ESP32 lamp nodes**, **MQTT communication**, a **Node.js backend**, a **React dashboard**, and **OpenStack cloud hosting**.
@@ -78,7 +77,7 @@ ESP32 Node 1        ESP32 Node 2
        React Dashboard
             |
          OpenStack VM
-````
+```
 
 ### Edge Layer
 
