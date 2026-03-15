@@ -1,0 +1,46 @@
+erDiagram
+  DEVICES ||--o{ TELEMETRY : has
+  DEVICES ||--|| DEVICE_STATE : has
+  DEVICES ||--o{ COMMANDS : receives
+  DEVICES ||--o{ ALERTS : generates
+
+  DEVICES {
+    string id
+    string label
+  }
+
+  TELEMETRY {
+    int id
+    string node_id
+    float lux
+    boolean motion
+    string mode
+    int brightness
+    string rgb_color
+    datetime timestamp
+  }
+
+  DEVICE_STATE {
+    int id
+    string node_id
+    string mode
+    int brightness
+    string rgb_color
+    datetime updated_at
+  }
+
+  COMMANDS {
+    int id
+    string node_id
+    string command_type
+    string payload
+    datetime created_at
+  }
+
+  ALERTS {
+    int id
+    string node_id
+    string severity
+    string message
+    datetime created_at
+  }

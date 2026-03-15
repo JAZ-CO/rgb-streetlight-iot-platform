@@ -1,0 +1,13 @@
+sequenceDiagram
+  participant Sensor as Motion Sensor
+  participant Node as ESP32 Node
+  participant Broker as MQTT Broker
+  participant Backend as Node.js Backend
+  participant UI as React Dashboard
+
+  Sensor->>Node: Motion detected
+  Node->>Node: Update local state and RGB
+  Node->>Broker: Publish telemetry/state
+  Broker->>Backend: Forward message
+  Backend->>Backend: Store and process
+  Backend->>UI: Push live update

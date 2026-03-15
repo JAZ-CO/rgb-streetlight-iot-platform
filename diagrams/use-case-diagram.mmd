@@ -1,0 +1,14 @@
+flowchart TB
+  User((Admin/User))
+  Monitor[Monitor Node State]
+  ViewAlerts[View Alerts]
+  SendCommand[Send Manual Override]
+  DetectLight[Detect Ambient Light]
+  DetectMotion[Detect Motion]
+  ChangeRGB[Change RGB and Brightness]
+
+  User --> Monitor
+  User --> ViewAlerts
+  User --> SendCommand
+  DetectLight --> ChangeRGB
+  DetectMotion --> ChangeRGB

@@ -1,0 +1,21 @@
+flowchart TB
+  subgraph Edge
+    N1[Node 1 Firmware]
+    N2[Node 2 Firmware]
+  end
+
+  subgraph Cloud
+    B[MQTT Broker]
+    API[Node.js API]
+    WS[Realtime Layer]
+    DB[(PostgreSQL)]
+    UI[React UI]
+  end
+
+  N1 --> B
+  N2 --> B
+  B --> API
+  API --> DB
+  API --> WS
+  UI --> API
+  UI --> WS
