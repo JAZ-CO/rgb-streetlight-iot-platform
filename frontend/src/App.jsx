@@ -1,5 +1,8 @@
-import DashboardPage from "./pages/DashboardPage.jsx";
-
 export default function App() {
-  return <DashboardPage />;
+  return (
+    <main style={{ fontFamily: "Arial, sans-serif", padding: "2rem" }}>
+      <h1>Adaptive RGB Smart Street Lighting Dashboard</h1>
+      <p>Frontend scaffold created successfully.</p>
+    </main>
+  );
 }

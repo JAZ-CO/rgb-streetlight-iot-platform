@@ -1,4 +1,9 @@
 # Diagrams
 
-Mermaid source files are stored here for version control.
-Render them later as images if needed for the report.
+Store UML and architecture diagrams here:
+- system-context
+- architecture
+- state-machine
+- sequence-motion-event
+- sequence-manual-override
+- er-diagram

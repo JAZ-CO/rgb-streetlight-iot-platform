@@ -1,12 +1,23 @@
-import http from "http";
-import { createApp } from "./app.js";
+import express from "express";
+import cors from "cors";
 
+const app = express();
 const port = process.env.PORT || 3000;
-const { app, initRealtime } = createApp();
-const server = http.createServer(app);
 
-initRealtime(server);
+app.use(cors());
+app.use(express.json());
 
-server.listen(port, () => {
+app.get("/health", (_req, res) => {
+  res.json({ status: "ok" });
+});
+
+app.get("/api/devices", (_req, res) => {
+  res.json([
+    { id: "node1", label: "Lamp Node 1" },
+    { id: "node2", label: "Lamp Node 2" }
+  ]);
+});
+
+app.listen(port, () => {
   console.log(`Backend listening on http://localhost:${port}`);
 });
