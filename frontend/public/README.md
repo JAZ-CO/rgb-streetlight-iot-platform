@@ -1,1 +1,1 @@
-Place static assets here.
+Static assets go here.
