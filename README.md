@@ -1,22 +1,10 @@
 # Adaptive RGB Smart Street Lighting System
 
-An IoT-based smart lighting pilot for a private campus road or private roadway, built using:
-- two ESP32 lamp nodes
-- MQTT communication
-- Node.js backend
-- React dashboard
-- PostgreSQL database
-- OpenStack-oriented deployment
+A very simple project scaffold for the IoT smart street lighting project.
 
-## Quick start
-```bash
-docker compose up
-```
+## Structure
+- `app/` - simple Node.js app folder
+- `firmware/` - Arduino IDE sketches for ESP32 nodes
 
-## Main folders
-- `backend/` - Node.js backend
-- `frontend/` - React dashboard
-- `firmware/` - ESP32 firmware for node1 and node2
-- `docs/` - shared project documentation
-- `diagrams/` - UML and architecture diagrams
-- `infra/` - broker config and infra notes
+## Notes
+This scaffold is intentionally minimal so the project stays easy to manage.
