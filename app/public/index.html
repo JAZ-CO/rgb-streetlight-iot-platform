@@ -3,10 +3,22 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Smart Street Lighting</title>
+  <title>MQTT Test Dashboard</title>
 </head>
 <body>
-  <h1>Adaptive RGB Smart Street Lighting System</h1>
-  <p>Simple app scaffold is ready.</p>
+  <h1>MQTT Test Dashboard</h1>
+  <p>Latest message:</p>
+  <pre id="output">Waiting for message...</pre>
+
+  <script>
+    async function fetchLatest() {
+      const res = await fetch("/api/latest");
+      const data = await res.json();
+      document.getElementById("output").textContent = data.latestMessage;
+    }
+
+    fetchLatest();
+    setInterval(fetchLatest, 1000);
+  </script>
 </body>
 </html>

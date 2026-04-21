@@ -7,6 +7,12 @@
     "start": "node server.js"
   },
   "dependencies": {
-    "express": "^4.19.2"
-  }
+    "express": "^4.22.1",
+    "mqtt": "^5.15.1"
+  },
+  "description": "",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs"
 }
