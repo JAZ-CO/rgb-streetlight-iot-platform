@@ -1,0 +1,71 @@
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #0f172a;
+  color: #e5e7eb;
+}
+main { max-width: 1100px; margin: 24px auto; padding: 0 16px; }
+header, section {
+  background: #111827;
+  border: 1px solid #243044;
+  border-radius: 18px;
+  padding: 22px;
+  margin-bottom: 18px;
+}
+header p { color: #a7b5cc; margin: 0 0 10px; }
+h1 { font-size: 44px; margin: 0 0 10px; }
+h2 { margin: 0 0 14px; }
+.pills, .legend { display: flex; gap: 10px; flex-wrap: wrap; }
+.pills span, .legend span {
+  background: #1f2937;
+  border: 1px solid #334155;
+  border-radius: 999px;
+  padding: 8px 12px;
+}
+.nodes { display: grid; grid-template-columns: repeat(auto-fit, minmax(310px, 1fr)); gap: 14px; }
+.card, .msg {
+  background: #172033;
+  border: 1px solid #334155;
+  border-radius: 16px;
+  padding: 16px;
+}
+.title { display: flex; justify-content: space-between; gap: 10px; }
+.code { font-size: 28px; font-weight: bold; }
+.state { text-transform: uppercase; font-weight: bold; }
+.lamps { display: flex; gap: 30px; justify-content: center; margin: 20px 0; }
+.pole { display: grid; justify-items: center; gap: 6px; }
+.head {
+  width: 68px;
+  height: 68px;
+  border-radius: 50%;
+  border: 5px solid #475569;
+  box-shadow: 0 0 25px currentColor;
+}
+.stem { width: 8px; height: 64px; background: #475569; }
+.base { width: 52px; height: 8px; background: #475569; border-radius: 8px; }
+.grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.box { background: #111827; border-radius: 12px; padding: 10px; }
+.box small { display: block; color: #9ca3af; }
+.controls { display: flex; gap: 8px; margin-top: 12px; }
+button {
+  background: #2563eb;
+  color: white;
+  border: 0;
+  border-radius: 10px;
+  padding: 10px 12px;
+  cursor: pointer;
+}
+button.yellow { background: #ca8a04; }
+button.purpleBtn { background: #7c3aed; }
+button.auto { background: #334155; }
+.row { display: flex; align-items: center; justify-content: space-between; }
+.log { display: grid; gap: 10px; }
+.empty { color: #94a3b8; text-align: center; padding: 25px; }
+pre { white-space: pre-wrap; color: #cbd5e1; margin: 10px 0 0; }
+.green { color: #22c55e; background: #22c55e; }
+.yellowLamp { color: #facc15; background: #facc15; }
+.red { color: #ef4444; background: #ef4444; }
+.blue { color: #38bdf8; background: #38bdf8; }
+.purple { color: #a855f7; background: #a855f7; }
+.off { color: #475569; background: #1f2937; }

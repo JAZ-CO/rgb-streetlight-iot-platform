@@ -1,24 +1,46 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html>
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>MQTT Test Dashboard</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Streetlight 2-bit Monitor</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>MQTT Test Dashboard</h1>
-  <p>Latest message:</p>
-  <pre id="output">Waiting for message...</pre>
+  <main>
+    <header>
+      <p>COE 454 IoT Project</p>
+      <h1>Smart Streetlight Monitor</h1>
+      <p>Ultrasonic-only, multi-node, 2-bit road states.</p>
+      <div class="pills">
+        <span>MQTT: 1883</span>
+        <span id="nodeCount">Nodes: 0</span>
+        <span id="msgCount">Messages: 0</span>
+        <span id="clientCount">MQTT clients: 0</span>
+      </div>
+    </header>
 
-  <script>
-    async function fetchLatest() {
-      const res = await fetch("/api/latest");
-      const data = await res.json();
-      document.getElementById("output").textContent = data.latestMessage;
-    }
+    <section class="legend">
+      <b>2-bit states:</b>
+      <span>00 Clear</span>
+      <span>01 Low congestion</span>
+      <span>10 High congestion</span>
+      <span>11 Accident</span>
+    </section>
 
-    fetchLatest();
-    setInterval(fetchLatest, 1000);
-  </script>
+    <section>
+      <h2>Streetlight nodes</h2>
+      <div id="nodes" class="nodes empty">Waiting for ESP32 nodes...</div>
+    </section>
+
+    <section>
+      <div class="row">
+        <h2>Publish log</h2>
+        <button onclick="clearLog()">Clear</button>
+      </div>
+      <div id="log" class="log empty">No MQTT state messages yet.</div>
+    </section>
+  </main>
+  <script src="script.js"></script>
 </body>
 </html>
